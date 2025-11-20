@@ -24,10 +24,30 @@ To write a program for mean, variance and cross correlation in SCILAB and verify
 
 ## PROGRAM
 ```
+function X=f(x)
+   z=2*(1-x)^2;
+   X=x*z;
+endfunction 
+a=0;
+b=1;
+EX=intg(a,b,f); 
+disp("Mean : ",EX)
+
+function X=g(x)
+   z=2*(1-x)^2;
+   X=(x^2)*z;
+endfunction 
+a=0;
+b=1;
+EX2=intg(a,b,g);
+var=EX2-(EX^2);
+disp("Variance : ",var);
 
 ```
 
 ## OUTPUT
+<img width="860" height="380" alt="AC-5" src="https://github.com/user-attachments/assets/828cc662-22d1-46d8-acdb-513eb943c1fe" />
+
 
 ## RESULT
 Thus the mean and variance are executed in Scilab and output is verified
